@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moropinzee</title>
+  <link rel="stylesheet" href="moropinzee.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1 class="heading">MOROPINZEE</h1>
+    <p>Monkey-Robot-Pirate-Ninja-Zombie</p>
+  </div>
+  <div class="button-div">
+    <button onclick="
+      myGame('monkey');
+      "class="face-button"><img src="faces/monkey.png" class="face">
+    </button>
+    <button onclick="
+      myGame('robot');
+      "class="face-button"><img src="faces/robot.png" class="face">
+    </button>
+    <button onclick="
+      myGame('pirate');
+      "class="face-button"><img src="faces/pirate.png" class="face">
+    </button>
+    <button onclick="
+      myGame('ninja');
+      "class="face-button"><img src="faces/ninja.png" class="face">
+    </button>
+    <button onclick="
+      myGame('zombie');
+      "class="face-button"><img src="faces/zombie.png" class="face">
+    </button>
+  </div>
+
+  <div class="game-display">
+    <button onclick="
+    gameScore.wins=0;
+    gameScore.losses=0;
+    gameScore.ties=0;
+    localStorage.removeItem('score');
+    scoreDisplay();
+    " class="game-command">Reset score</button>
+    <div class="game-info">
+      <p class="moves"></p>
+      <div class="color">
+        <p class="result2"></p>
+        <p class="result"></p>
+      </div>
+      <p class="score"></p>
+    </div>
+    <button onclick="
+      autoPlay()
+    " class="game-command">Auto Play</button>
+  </div>
+  <script src="moropinzee.js"> 
+  </script>
+
+</body>
+</html>
+
